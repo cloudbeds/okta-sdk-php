@@ -83,6 +83,8 @@ class ClientBuilder
      */
     private $defaultFile = '.okta/okta.yaml';
 
+    public $yamlParser;
+
     public function __construct($yamlParser = null, $defaultFilePath = null)
     {
         if(function_exists('posix_getpwuid') && function_exists('posix_getuid')) {

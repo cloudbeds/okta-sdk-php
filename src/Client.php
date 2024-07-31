@@ -64,7 +64,7 @@ class Client
      */
     private $authorizationMode;
 
-    public $datastore;
+    public $dataStore;
 
     /**
      * Create a new instance of Client.
