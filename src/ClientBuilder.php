@@ -83,6 +83,8 @@ class ClientBuilder
      */
     private $defaultFile = '.okta/okta.yaml';
 
+    public $dataStore;
+
     public $yamlParser;
 
     public function __construct($yamlParser = null, $defaultFilePath = null)
