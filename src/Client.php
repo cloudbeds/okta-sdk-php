@@ -64,6 +64,10 @@ class Client
      */
     private $authorizationMode;
 
+    public $dataStore;
+    
+    public $yamlParser;
+
     /**
      * Create a new instance of Client.
      *
