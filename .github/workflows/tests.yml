@@ -45,4 +45,7 @@ jobs:
         run: composer update --prefer-dist --no-interaction --no-progress
 
       - name: Run PHPUnit
+        env:
+          OKTA_CLIENT_TOKEN: dummy-token-for-unit-tests
+          OKTA_CLIENT_ORGURL: https://dev.okta.com
         run: vendor/bin/phpunit --testsuite=Unit
