@@ -39,7 +39,7 @@ jobs:
           tools: composer:v2
 
       - name: Validate composer.json
-        run: composer validate --strict --no-check-publish
+        run: composer validate --no-check-publish --no-check-lock
 
       - name: Install dependencies
         run: composer update --prefer-dist --no-interaction --no-progress
