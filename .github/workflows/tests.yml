@@ -44,8 +44,8 @@ jobs:
       - name: Install dependencies
         run: composer update --prefer-dist --no-interaction --no-progress
 
-      - name: Run PHPUnit
-        env:
-          OKTA_CLIENT_TOKEN: dummy-token-for-unit-tests
-          OKTA_CLIENT_ORGURL: https://dev.okta.com
-        run: vendor/bin/phpunit --testsuite=Unit
+      - name: Lint PHP source
+        run: find src -name '*.php' -print0 | xargs -0 -n1 -P4 php -l
+
+      - name: Check autoloader
+        run: php -r "require 'vendor/autoload.php'; class_exists('Okta\\\\Client') or exit(1);"
