@@ -25,7 +25,7 @@ use League\Flysystem\Memory\MemoryAdapter;
 class MemoryManager extends CacheManager
 {
 
-    public function __construct(AbstractAdapter $adapter = null)
+    public function __construct(?AbstractAdapter $adapter = null)
     {
         if(null === $adapter) {
             $adapter = new MemoryAdapter();

@@ -65,7 +65,7 @@ abstract class AbstractResource
      * @param \stdClass|NULL        $properties Properties for the resource.
      * @param array                 $options Options to use on the resource.
      */
-    public function __construct(DefaultDataStore $dataStore = null, \stdClass $properties = null, array $options = [])
+    public function __construct(?DefaultDataStore $dataStore = null, ?\stdClass $properties = null, array $options = [])
     {
         $this->dataStore = $dataStore ?: Client::getInstance()->getDataStore();
         $this->setProperties($properties);
@@ -90,7 +90,7 @@ abstract class AbstractResource
      * @param \stdClass|NULL $properties the properties to set.
      * @return self
      */
-    public function setProperties(\stdClass $properties = null): self
+    public function setProperties(?\stdClass $properties = null): self
     {
         $this->dirty = false;
 
