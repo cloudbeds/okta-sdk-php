@@ -23,7 +23,7 @@ class ResourceException extends GeneralException
 {
     private $error;
 
-    public function __construct(Error $error, Throwable $previous = null)
+    public function __construct(Error $error, ?Throwable $previous = null)
     {
         $this->error = $error;
         $message = $error->getErrorSummary() ?: '';

@@ -81,10 +81,10 @@ class Client
     public function __construct(
         string $token,
         string $organizationUrl,
-        HttpClient $httpClient = null,
+        ?HttpClient $httpClient = null,
         string $integrationUserAgent = null,
-        CacheManager $cacheManager = null,
-        AuthorizationMode $authorizationMode = null
+        ?CacheManager $cacheManager = null,
+        ?AuthorizationMode $authorizationMode = null
     ) {
         $this->token = $token;
         $this->organizationUrl = $organizationUrl;

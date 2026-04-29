@@ -89,7 +89,7 @@ class DefaultDataStore
      * @param HttpClient|NULL $httpClient
      * @param AuthorizationMode|NULL $authorizationMode
      */
-    public function __construct(string $token, string $organizationUrl, HttpClient $httpClient = null, AuthorizationMode $authorizationMode = null)
+    public function __construct(string $token, string $organizationUrl, ?HttpClient $httpClient = null, ?AuthorizationMode $authorizationMode = null)
     {
         $this->token = $token;
         $this->organizationUrl = $organizationUrl;
@@ -121,7 +121,7 @@ class DefaultDataStore
      * @param array          $options Any options you want to set.
      * @return object
      */
-    public function instantiate(string $class, \stdClass $properties = null, array $options = [])
+    public function instantiate(string $class, ?\stdClass $properties = null, array $options = [])
     {
         $propertiesArr = array($properties, $options);
 
